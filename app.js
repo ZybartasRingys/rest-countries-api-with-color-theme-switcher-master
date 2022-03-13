@@ -1,35 +1,28 @@
-"use strict";
+'use strict'
 
-const cardsContainer = document.getElementById("cards-section");
+const cardsContainer = document.getElementById('cards-section')
 
-const url = "https://restcountries.com/v2/name/Germany";
+const url = 'https://restcountries.com/v2/name/Germany'
 
-let data = {};
+let data = {}
 
 //async fetch function
 
 async function fetchCountry() {
-  const response = await fetch(url);
-  const country = await response.json();
-
-  console.log(country);
-
-  country.forEach((element) => {
-    console.log(img);
-    cardsContainer.insertAdjacentHTML("beforeend", createCard(element, title));
-  });
-
-  country.forEach((element) => {
-    data[element.title];
-  });
+  const response = await fetch(url)
+  const country = await response.json()
+  country.forEach(element => {
+    data[element.name] = element
+  })
 }
 
-fetchCountry();
+fetchCountry()
 
-function createCard(element) {
-  const title = element.name;
-  const img = element.flag;
-  console.log(img);
+console.log(data)
+
+function createCard() {
+  let title = data['name']
+  console.log(title)
   return `
     <div class="card">
                 <div class="card-image"></div>
@@ -40,5 +33,7 @@ function createCard(element) {
                   <p class="card-text"><span>Capital:</span> Berlin</p>
                 </div>
               </div>
-    `;
+    `
 }
+
+createCard()

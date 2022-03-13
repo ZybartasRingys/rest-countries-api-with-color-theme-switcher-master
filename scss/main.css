@@ -1,1 +1,37 @@
-/* No CSS *//*# sourceMappingURL=main.css.map */
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap");
+.navigation {
+  height: 80px;
+}
+
+/* Card */
+.card-image {
+  height: 160px;
+}
+
+.card-body .card-title {
+  font-family: "Nunito Sans";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 26px;
+  color: #111517;
+}
+
+.card-body .card-text {
+  font-family: "Nunito Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.card-body span {
+  font-style: bold;
+  opacity: 1 !important;
+}
+
+/* Card end*/
+body {
+  font-family: "Nunito Sans", sans-serif;
+}
+/*# sourceMappingURL=main.css.map */

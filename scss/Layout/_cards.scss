@@ -1,0 +1,29 @@
+/* Card */
+
+.card-image {
+  height: 160px;
+}
+
+.card-body {
+  .card-title {
+    font-family: "Nunito Sans";
+    font-style: normal;
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 26px;
+    color: $VeryDarkBlue2;
+  }
+  .card-text {
+    font-family: "Nunito Sans";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 16px;
+  }
+  span {
+    font-style: bold;
+    opacity: 1 !important;
+  }
+}
+
+/* Card end*/

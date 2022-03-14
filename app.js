@@ -2,7 +2,7 @@
 
 const cardsContainer = document.getElementById("cards-section");
 
-const url = "https://restcountries.com/v2/name/Lithuania";
+const url = "https://restcountries.com/v2/all";
 
 let data = {};
 

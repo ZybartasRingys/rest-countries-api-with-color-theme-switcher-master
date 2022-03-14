@@ -1,14 +1,26 @@
-.rounded {
+.search {
+  height: 56px;
   border: none;
   font-style: normal;
   font-weight: 400;
   font-size: 12px;
   line-height: 20px;
   color: $DarkGray;
+  background-color: $VeryLightGray !important;
   opacity: 0.8;
   cursor: pointer;
+
+  .search-input {
+    border: none;
+  }
 }
 
+.selection-items {
+  width: 480px;
+  height: 56px;
+}
+
+// Filter btn
 .dropdown {
   width: 200px;
   font-style: normal;
@@ -22,6 +34,10 @@
   &:focus {
     outline: none;
     box-shadow: none;
+    color: $VeryDarkBlue2;
+  }
+
+  &:hover {
     color: $VeryDarkBlue2;
   }
 }
@@ -39,4 +55,5 @@
 .fa-magnifying-glass {
   margin-top: 15px;
   cursor: pointer;
+  background-color: white;
 }

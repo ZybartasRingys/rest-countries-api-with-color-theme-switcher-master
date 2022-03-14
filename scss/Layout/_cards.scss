@@ -1,5 +1,14 @@
 /* Card */
 
+.card {
+  cursor: pointer;
+
+  &:hover {
+    box-shadow: rgba(0, 0, 0, 0.22) 0px 19px 43px;
+    transform: translate3d(0px, -5px, 0px);
+  }
+}
+
 .card-image {
   height: 160px;
 

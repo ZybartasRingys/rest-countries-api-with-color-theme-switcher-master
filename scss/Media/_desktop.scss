@@ -1,0 +1,12 @@
+@media only screen and (min-width: 1339px) {
+  #cards-section {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 75px;
+  }
+
+  .fa-moon {
+    width: 20px;
+    height: 20px;
+  }
+}

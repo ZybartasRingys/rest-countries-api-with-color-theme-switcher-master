@@ -1,4 +1,18 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap");
+@media only screen and (min-width: 1339px) {
+  #cards-section {
+    display: -ms-grid !important;
+    display: grid !important;
+    -ms-grid-columns: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 75px;
+  }
+  .fa-moon {
+    width: 20px;
+    height: 20px;
+  }
+}
+
 .navigation {
   height: 80px;
 }
@@ -26,17 +40,29 @@
 .navigation .fa-moon {
   width: 16px;
   height: 16px;
+  cursor: pointer;
 }
 
-.rounded {
+.search {
+  height: 56px;
   border: none;
   font-style: normal;
   font-weight: 400;
   font-size: 12px;
   line-height: 20px;
   color: #858585;
+  background-color: #fafafa !important;
   opacity: 0.8;
   cursor: pointer;
+}
+
+.search .search-input {
+  border: none;
+}
+
+.selection-items {
+  width: 480px;
+  height: 56px;
 }
 
 .dropdown {
@@ -57,6 +83,10 @@
   color: #111517;
 }
 
+.dropdown:hover {
+  color: #111517;
+}
+
 .dropdown-item {
   font-style: normal;
   font-weight: 400;
@@ -68,9 +98,21 @@
 .fa-magnifying-glass {
   margin-top: 15px;
   cursor: pointer;
+  background-color: white;
 }
 
 /* Card */
+.card {
+  cursor: pointer;
+}
+
+.card:hover {
+  -webkit-box-shadow: rgba(0, 0, 0, 0.22) 0px 19px 43px;
+          box-shadow: rgba(0, 0, 0, 0.22) 0px 19px 43px;
+  -webkit-transform: translate3d(0px, -5px, 0px);
+          transform: translate3d(0px, -5px, 0px);
+}
+
 .card-image {
   height: 160px;
 }

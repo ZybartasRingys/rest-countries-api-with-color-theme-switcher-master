@@ -1,0 +1,42 @@
+.rounded {
+  border: none;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 20px;
+  color: $DarkGray;
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.dropdown {
+  width: 200px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 20px;
+  color: $VeryDarkBlue2;
+  border: none;
+  background-color: $VeryLightGray;
+
+  &:focus {
+    outline: none;
+    box-shadow: none;
+    color: $VeryDarkBlue2;
+  }
+}
+
+.dropdown-item {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  color: $VeryDarkBlue2;
+}
+
+// search icon
+
+.fa-magnifying-glass {
+  margin-top: 15px;
+  cursor: pointer;
+}

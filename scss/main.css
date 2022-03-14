@@ -3,9 +3,81 @@
   height: 80px;
 }
 
+.navigation .navigation-col {
+  height: 80px;
+}
+
+.navigation h1 {
+  font-style: normal;
+  font-weight: 800;
+  font-size: 14px;
+  line-height: 20px;
+  color: #111517;
+}
+
+.navigation h2 {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 16px;
+  color: #111517;
+}
+
+.navigation .fa-moon {
+  width: 16px;
+  height: 16px;
+}
+
+.rounded {
+  border: none;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 20px;
+  color: #858585;
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.dropdown {
+  width: 200px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 20px;
+  color: #111517;
+  border: none;
+  background-color: #fafafa;
+}
+
+.dropdown:focus {
+  outline: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  color: #111517;
+}
+
+.dropdown-item {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  color: #111517;
+}
+
+.fa-magnifying-glass {
+  margin-top: 15px;
+  cursor: pointer;
+}
+
 /* Card */
 .card-image {
   height: 160px;
+}
+
+.card-image .flag {
+  width: 100%;
+  height: 100%;
 }
 
 .card-body .card-title {
@@ -33,5 +105,6 @@
 /* Card end*/
 body {
   font-family: "Nunito Sans", sans-serif;
+  background-color: #fafafa;
 }
 /*# sourceMappingURL=main.css.map */

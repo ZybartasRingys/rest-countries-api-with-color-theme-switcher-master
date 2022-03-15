@@ -1,0 +1,20 @@
+//active classes for dark/light theme
+body.active {
+  background-color: $VeryDarkBlue;
+}
+
+.navigation-col.active {
+  background-color: $VeryDarkBlue;
+}
+
+.where.active {
+  color: white !important;
+}
+
+.dark.active {
+  color: white !important;
+}
+
+.card-body.active {
+  background-color: $VeryDarkBlue !important;
+}

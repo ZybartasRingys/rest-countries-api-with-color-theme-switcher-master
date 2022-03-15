@@ -1,17 +1,22 @@
-@import "./variables";
+@import './variables';
+
+// components
+
+@import './Components/activeClasses';
 
 // media queries
 
-@import "./Media/mobile";
-@import "./Media/desktop";
+@import './Media/mobile';
+@import './Media/tablet';
+@import './Media/desktop';
 
 // layout
 
-@import "./Layout/navbar";
-@import "./Layout/selections";
-@import "./Layout/cards";
+@import './Layout/navbar';
+@import './Layout/selections';
+@import './Layout/cards';
 
 body {
-  font-family: "Nunito Sans", sans-serif;
+  font-family: 'Nunito Sans', sans-serif;
   background-color: $VeryLightGray;
 }

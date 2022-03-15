@@ -1,0 +1,7 @@
+@media screen and (min-width: 768px) and (max-width: 1438px) {
+  #cards-section {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 60px;
+  }
+}

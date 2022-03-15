@@ -26,20 +26,20 @@
     <link rel="stylesheet" href="/scss/main.css" />
     <title>Country API</title>
   </head>
-  <body>
+  <body id="body">
     <!-- Header -->
     <header>
-      <div class="container navigation shadow-sm p-3 bg-white rounded">
-        <div class="row">
+      <div class="container-fluid navigation shadow-sm bg-white rounded">
+        <div class="row ">
           <div
-            class="col-12 navigation-col mx-auto d-flex justify-content-between align-items-center"
+            class="col-12  navigation-col mx-auto d-flex justify-content-between align-items-center"
           >
             <div class="col-6">
-              <h1>Where in the world?</h1>
+              <h1 class="where">Where in the world?</h1>
             </div>
             <div class="col-5 d-flex justify-content-end">
               <i class="fa-regular fa-moon"></i>
-              <h2>Dark Mode</h2>
+              <h2 class="dark" id="Dark-mode">Dark Mode</h2>
             </div>
           </div>
         </div>
@@ -57,11 +57,11 @@
           <div class="row">
             <div class="col-12 d-flex flex-column flex-xxl-row">
               <div class="col-12 col-md-6 search mb-5 d-flex flex-row">
-                <div class="input-group">
-                  <i class="fa-solid fa-magnifying-glass"></i>
+                <div class="input-group shadow-sm  bg-white rounded">
+                  <i class="fa-solid fa-magnifying-glass fa-lg"></i>
                   <input
                     type="search"
-                    class="form-control rounded search-input shadow-sm p-3 bg-white rounded"
+                    class="form-control rounded search-input "
                     placeholder="Search for a country..."
                     aria-label="Search"
                     aria-describedby="search-addon"
@@ -72,9 +72,9 @@
               <div
                 class="col filter d-flex justify-content-xxl-end align-items-center"
               >
-                <div class="dropdown mb">
+                <div class="dropdown">
                   <button
-                    class="btn btn-secondary dropdown-toggle dropdown shadow-sm p-3 mb-5 bg-white rounded"
+                    class="btn btn-secondary dropdown-toggle dropdown shadow-sm  bg-white rounded"
                     type="button"
                     id="dropdownMenuButton1"
                     data-toggle="dropdown"

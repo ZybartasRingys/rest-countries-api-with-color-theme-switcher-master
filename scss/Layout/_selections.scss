@@ -1,5 +1,4 @@
 .search {
-  height: 56px;
   border: none;
   font-style: normal;
   font-weight: 400;
@@ -15,6 +14,10 @@
   }
 }
 
+.input-group {
+  height: 56px;
+}
+
 .selection-items {
   width: 480px;
   height: 56px;
@@ -22,7 +25,9 @@
 
 // Filter btn
 .dropdown {
+  height: 56px;
   width: 200px;
+  margin-bottom: 30px;
   font-style: normal;
   font-weight: 400;
   font-size: 12px;
@@ -53,7 +58,9 @@
 // search icon
 
 .fa-magnifying-glass {
-  margin-top: 15px;
+  margin-top: 28px !important;
+  margin-right: 30px;
+  margin-left: 10px;
   cursor: pointer;
   background-color: white;
 }

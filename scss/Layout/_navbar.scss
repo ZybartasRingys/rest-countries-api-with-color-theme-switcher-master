@@ -5,7 +5,7 @@
     height: 80px;
   }
 
-  h1 {
+  .where {
     font-style: normal;
     font-weight: 800;
     font-size: 14px;
@@ -13,12 +13,13 @@
     color: $VeryDarkBlue2;
   }
 
-  h2 {
+  .dark {
     font-style: normal;
     font-weight: 600;
     font-size: 12px;
     line-height: 16px;
     color: $VeryDarkBlue2;
+    cursor: pointer;
   }
 
   .fa-moon {

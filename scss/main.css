@@ -4,7 +4,7 @@ body.active {
 }
 
 .navigation-col.active {
-  background-color: #202c37;
+  background-color: #2b3945;
 }
 
 .where.active {
@@ -16,7 +16,33 @@ body.active {
 }
 
 .card-body.active {
-  background-color: #202c37 !important;
+  background-color: #2b3945 !important;
+  color: white !important;
+}
+
+.card-title.active {
+  color: white !important;
+}
+
+.search.active {
+  background-color: #2b3945 !important;
+}
+
+.dropdown.active {
+  background-color: #2b3945 !important;
+  color: white !important;
+}
+
+.search-input.active {
+  background-color: #2b3945 !important;
+}
+
+.input-group.active {
+  background-color: #2b3945 !important;
+}
+
+.fa-magnifying-glass.active {
+  background-color: #2b3945 !important;
 }
 
 @media screen and (min-width: 768px) and (max-width: 1438px) {
@@ -36,10 +62,6 @@ body.active {
     -ms-grid-columns: 1fr 1fr 1fr 1fr;
         grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 75px;
-  }
-  .fa-moon {
-    width: 25px !important;
-    height: 25px !important;
   }
   .navigation h1 {
     font-size: 20px !important;
@@ -91,21 +113,33 @@ body.active {
   line-height: 20px;
   color: #858585;
   background-color: #fafafa !important;
+  border-radius: 10px !important;
   opacity: 0.8;
   cursor: pointer;
 }
 
 .search .search-input {
   border: none;
+  border-radius: 10px !important;
 }
 
 .input-group {
   height: 56px;
+  border-radius: 10px !important;
 }
 
 .selection-items {
   width: 480px;
   height: 56px;
+}
+
+.fa-magnifying-glass {
+  position: relative;
+  margin-top: 28px !important;
+  margin-right: 30px;
+  margin-left: 10px;
+  cursor: pointer;
+  background-color: white;
 }
 
 .dropdown {
@@ -118,6 +152,7 @@ body.active {
   line-height: 20px;
   color: #111517;
   border: none;
+  border-radius: 10px;
   background-color: #fafafa;
 }
 
@@ -140,17 +175,10 @@ body.active {
   color: #111517;
 }
 
-.fa-magnifying-glass {
-  margin-top: 28px !important;
-  margin-right: 30px;
-  margin-left: 10px;
-  cursor: pointer;
-  background-color: white;
-}
-
 /* Card */
 .card {
   cursor: pointer;
+  border: none;
 }
 
 .card:hover {

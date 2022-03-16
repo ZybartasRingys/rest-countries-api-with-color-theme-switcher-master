@@ -1,3 +1,4 @@
+// Search input
 .search {
   border: none;
   font-style: normal;
@@ -6,22 +7,38 @@
   line-height: 20px;
   color: $DarkGray;
   background-color: $VeryLightGray !important;
+  border-radius: 10px !important;
   opacity: 0.8;
   cursor: pointer;
 
   .search-input {
     border: none;
+    border-radius: 10px !important;
   }
 }
 
 .input-group {
   height: 56px;
+  border-radius: 10px !important;
 }
 
 .selection-items {
   width: 480px;
   height: 56px;
 }
+
+// search icon
+
+.fa-magnifying-glass {
+  position: relative;
+  margin-top: 28px !important;
+  margin-right: 30px;
+  margin-left: 10px;
+  cursor: pointer;
+  background-color: white;
+}
+
+// Search input end
 
 // Filter btn
 .dropdown {
@@ -34,6 +51,7 @@
   line-height: 20px;
   color: $VeryDarkBlue2;
   border: none;
+  border-radius: 10px;
   background-color: $VeryLightGray;
 
   &:focus {
@@ -53,14 +71,4 @@
   font-size: 12px;
   line-height: 16px;
   color: $VeryDarkBlue2;
-}
-
-// search icon
-
-.fa-magnifying-glass {
-  margin-top: 28px !important;
-  margin-right: 30px;
-  margin-left: 10px;
-  cursor: pointer;
-  background-color: white;
 }

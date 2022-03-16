@@ -4,7 +4,7 @@ body.active {
 }
 
 .navigation-col.active {
-  background-color: $VeryDarkBlue;
+  background-color: $DarkBlue;
 }
 
 .where.active {
@@ -16,5 +16,31 @@ body.active {
 }
 
 .card-body.active {
-  background-color: $VeryDarkBlue !important;
+  background-color: $DarkBlue !important;
+  color: white !important;
+}
+
+.card-title.active {
+  color: white !important;
+}
+
+.search.active {
+  background-color: $DarkBlue !important;
+}
+
+.dropdown.active {
+  background-color: $DarkBlue !important;
+  color: white !important;
+}
+
+.search-input.active {
+  background-color: $DarkBlue !important;
+}
+
+.input-group.active {
+  background-color: $DarkBlue !important;
+}
+
+.fa-magnifying-glass.active {
+  background-color: $DarkBlue !important;
 }

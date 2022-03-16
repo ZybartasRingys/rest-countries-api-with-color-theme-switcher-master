@@ -9,6 +9,7 @@ const navCol = document.querySelector('.navigation-col')
 const whereText = document.querySelector('.where')
 const darkText = document.querySelector('.dark')
 const cardBody = document.querySelectorAll('.card-body')
+console.log(cardBody)
 
 const url = 'https://restcountries.com/v2/all'
 

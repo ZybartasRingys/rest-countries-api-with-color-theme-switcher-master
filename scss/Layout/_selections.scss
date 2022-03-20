@@ -8,18 +8,24 @@
   color: $DarkGray;
   background-color: $VeryLightGray !important;
   border-radius: 10px !important;
+  border: none;
   opacity: 0.8;
   cursor: pointer;
 
   .search-input {
     border: none;
     border-radius: 10px !important;
+
+    &:focus {
+      box-shadow: none !important;
+    }
   }
 }
 
 .input-group {
   height: 56px;
   border-radius: 10px !important;
+  border: none;
 }
 
 .selection-items {
@@ -53,6 +59,8 @@
   border: none;
   border-radius: 10px;
   background-color: $VeryLightGray;
+
+  // dropdown menu
 
   &:focus {
     outline: none;

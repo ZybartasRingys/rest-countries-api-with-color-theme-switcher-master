@@ -45,6 +45,14 @@ body.active {
   background-color: $DarkBlue !important;
 }
 
+.dropdown-menu.active {
+  background-color: $DarkBlue !important;
+}
+
+.dropdown-item.active {
+  color: white !important;
+}
+
 .hide {
   display: none;
 }

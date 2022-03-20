@@ -1,8 +1,6 @@
 "use strict";
 
 const cardsContainer = document.getElementById("cards-section");
-
-// Themes
 const dark = document.getElementById("Dark-mode");
 const body = document.getElementById("body");
 const navCol = document.querySelector(".navigation-col");
@@ -10,6 +8,9 @@ const whereText = document.querySelector(".where");
 const darkText = document.querySelector(".dark");
 const searchInput = document.querySelector(".search-input");
 const filterBtn = document.getElementById("dropdownMenuButton1");
+const dropDownMenu = document.querySelector(".dropdown-menu");
+const menuItem = document.querySelectorAll(".dropdown-item");
+const navigation = document.querySelector("navigation");
 const inputGroup = document.querySelector(".input-group");
 const glass = document.querySelector(".fa-magnifying-glass");
 const moon = document.querySelector(".fa-moon");
@@ -22,14 +23,6 @@ let data = {};
 
 dark.addEventListener("click", switchDark);
 
-searchInput.addEventListener("input", function (e) {
-  let value = e.target.value;
-
-  // currentCards.forEach((element) => {
-  //   console.log(element);
-  // });
-});
-
 // Switch to dark theme function
 
 function switchDark() {
@@ -41,6 +34,11 @@ function switchDark() {
   filterBtn.classList.toggle("active");
   inputGroup.classList.toggle("active");
   glass.classList.toggle("active");
+  dropDownMenu.classList.toggle("active");
+
+  menuItem.forEach((item) => {
+    item.classList.toggle("active");
+  });
 
   switchThemeIcon();
 }
@@ -72,23 +70,36 @@ async function fetchCountry() {
 
     //cards search functionality
 
-    let cards = [];
-
-    console.log(cards);
+    let cardsTitle = [];
 
     countryCards.forEach((element) => {
       const elementTitle = element.lastElementChild.children[0];
 
-      cards.push(elementTitle);
+      cardsTitle.push(elementTitle);
     });
 
     searchInput.addEventListener("input", function (e) {
       let value = e.target.value;
 
-      cards.forEach((card) => {
+      cardsTitle.forEach((card) => {
         const isVisible = card.innerText.includes(value);
 
         card.parentElement.parentElement.classList.toggle("hide", !isVisible);
+      });
+    });
+
+    // filter by region fuction
+
+    menuItem.forEach((item) => {
+      item.addEventListener("click", function () {
+        let region = item.innerText;
+
+        cardsBody.forEach((card) => {
+          const regionValue = card.childNodes[5].innerText;
+          const isIncludes = regionValue.includes(region);
+
+          card.parentElement.classList.toggle("hide", !isIncludes);
+        });
       });
     });
 

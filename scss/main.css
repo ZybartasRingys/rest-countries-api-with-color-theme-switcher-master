@@ -45,6 +45,14 @@ body.active {
   background-color: #2b3945 !important;
 }
 
+.dropdown-menu.active {
+  background-color: #2b3945 !important;
+}
+
+.dropdown-item.active {
+  color: white !important;
+}
+
 .hide {
   display: none;
 }
@@ -118,6 +126,7 @@ body.active {
   color: #858585;
   background-color: #fafafa !important;
   border-radius: 10px !important;
+  border: none;
   opacity: 0.8;
   cursor: pointer;
 }
@@ -127,9 +136,15 @@ body.active {
   border-radius: 10px !important;
 }
 
+.search .search-input:focus {
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+}
+
 .input-group {
   height: 56px;
   border-radius: 10px !important;
+  border: none;
 }
 
 .selection-items {

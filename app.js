@@ -22,6 +22,14 @@ let data = {};
 
 dark.addEventListener("click", switchDark);
 
+searchInput.addEventListener("input", function (e) {
+  let value = e.target.value;
+
+  // currentCards.forEach((element) => {
+  //   console.log(element);
+  // });
+});
+
 // Switch to dark theme function
 
 function switchDark() {
@@ -57,8 +65,32 @@ async function fetchCountry() {
     });
 
     // cards
-    const cards = document.querySelectorAll(".card-body");
+
+    const countryCards = document.querySelectorAll(".card");
+    const cardsBody = document.querySelectorAll(".card-body");
     const title = document.querySelectorAll(".card-title");
+
+    //cards search functionality
+
+    let cards = [];
+
+    console.log(cards);
+
+    countryCards.forEach((element) => {
+      const elementTitle = element.lastElementChild.children[0];
+
+      cards.push(elementTitle);
+    });
+
+    searchInput.addEventListener("input", function (e) {
+      let value = e.target.value;
+
+      cards.forEach((card) => {
+        const isVisible = card.innerText.includes(value);
+
+        card.parentElement.parentElement.classList.toggle("hide", !isVisible);
+      });
+    });
 
     // cards title
     title.forEach((element) => {
@@ -67,17 +99,21 @@ async function fetchCountry() {
       });
     });
     // cards body
-    cards.forEach((element) => {
+    cardsBody.forEach((element) => {
       dark.addEventListener("click", function () {
         element.classList.toggle("active");
       });
     });
+
+    // search input filter
   } catch (error) {
     console.log(error);
   }
 }
 
 fetchCountry();
+
+// create cards function
 
 function createCard(element) {
   let title = element["name"];

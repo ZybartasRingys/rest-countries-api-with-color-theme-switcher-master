@@ -53,6 +53,10 @@ body.active {
   color: white !important;
 }
 
+.nav-row.active {
+  background-color: #2b3945 !important;
+}
+
 .hide {
   display: none;
 }
@@ -114,6 +118,7 @@ body.active {
 .navigation .fa-moon {
   width: 16px;
   height: 16px;
+  margin-right: 5px;
   cursor: pointer;
 }
 
@@ -155,8 +160,8 @@ body.active {
 .fa-magnifying-glass {
   position: relative;
   margin-top: 28px !important;
-  margin-right: 30px;
-  margin-left: 10px;
+  margin-right: 15px;
+  margin-left: 30px;
   cursor: pointer;
   background-color: white;
 }
@@ -209,11 +214,13 @@ body.active {
 
 .card-image {
   height: 160px;
+  border-radius: 5px 5px 0 0 !important;
 }
 
 .card-image .flag {
   width: 100%;
   height: 100%;
+  border-radius: 5px 5px 0 0 !important;
 }
 
 .card-body .card-title {

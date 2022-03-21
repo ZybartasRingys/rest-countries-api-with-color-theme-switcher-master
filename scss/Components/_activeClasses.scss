@@ -53,6 +53,10 @@ body.active {
   color: white !important;
 }
 
+.nav-row.active {
+  background-color: $DarkBlue !important;
+}
+
 .hide {
   display: none;
 }

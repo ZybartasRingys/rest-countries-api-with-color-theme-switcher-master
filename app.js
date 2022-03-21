@@ -14,8 +14,11 @@ const navigation = document.querySelector("navigation");
 const inputGroup = document.querySelector(".input-group");
 const glass = document.querySelector(".fa-magnifying-glass");
 const moon = document.querySelector(".fa-moon");
+const navRow = document.querySelector(".nav-row");
+const all = document.querySelector(".all");
 
-const url = "https://restcountries.com/v2/all";
+const url =
+  "https://restcountries.com/v2/alpha?codes=DEU,USA,BRA,ISL,AFG,ALA,ALB,DZA";
 
 let data = {};
 
@@ -35,18 +38,11 @@ function switchDark() {
   inputGroup.classList.toggle("active");
   glass.classList.toggle("active");
   dropDownMenu.classList.toggle("active");
+  navRow.classList.toggle("active");
 
   menuItem.forEach((item) => {
     item.classList.toggle("active");
   });
-
-  switchThemeIcon();
-}
-
-// switch theme icon function
-
-function switchThemeIcon() {
-  moon.style.color = "white";
 }
 
 // API for cards functionality
@@ -68,6 +64,19 @@ async function fetchCountry() {
     const cardsBody = document.querySelectorAll(".card-body");
     const title = document.querySelectorAll(".card-title");
 
+    // cards title dark light theme
+    title.forEach((element) => {
+      dark.addEventListener("click", function () {
+        element.classList.toggle("active");
+      });
+    });
+    // cards body dark light theme
+    cardsBody.forEach((element) => {
+      dark.addEventListener("click", function () {
+        element.classList.toggle("active");
+      });
+    });
+
     //cards search functionality
 
     let cardsTitle = [];
@@ -83,7 +92,6 @@ async function fetchCountry() {
 
       cardsTitle.forEach((card) => {
         const isVisible = card.innerText.includes(value);
-
         card.parentElement.parentElement.classList.toggle("hide", !isVisible);
       });
     });
@@ -102,21 +110,6 @@ async function fetchCountry() {
         });
       });
     });
-
-    // cards title
-    title.forEach((element) => {
-      dark.addEventListener("click", function () {
-        element.classList.toggle("active");
-      });
-    });
-    // cards body
-    cardsBody.forEach((element) => {
-      dark.addEventListener("click", function () {
-        element.classList.toggle("active");
-      });
-    });
-
-    // search input filter
   } catch (error) {
     console.log(error);
   }

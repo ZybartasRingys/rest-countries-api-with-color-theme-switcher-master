@@ -57,6 +57,10 @@ body.active {
   background-color: #2b3945 !important;
 }
 
+.all.active {
+  color: white !important;
+}
+
 .hide {
   display: none;
 }
@@ -128,7 +132,7 @@ body.active {
   font-weight: 400;
   font-size: 12px;
   line-height: 20px;
-  color: #858585;
+  color: #858585 !important;
   background-color: #fafafa !important;
   border-radius: 10px !important;
   border: none;
@@ -196,6 +200,20 @@ body.active {
   font-weight: 400;
   font-size: 12px;
   line-height: 16px;
+  color: #111517;
+}
+
+.all {
+  margin-left: 17px;
+  text-decoration: none;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  color: #111517;
+}
+
+.all:hover {
   color: #111517;
 }
 

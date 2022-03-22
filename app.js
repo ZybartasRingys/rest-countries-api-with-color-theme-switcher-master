@@ -20,8 +20,6 @@ const all = document.querySelector(".all");
 const url =
   "https://restcountries.com/v2/alpha?codes=DEU,USA,BRA,ISL,AFG,ALA,ALB,DZA";
 
-let data = {};
-
 // Dark and light theme
 
 dark.addEventListener("click", switchDark);
@@ -39,6 +37,7 @@ function switchDark() {
   glass.classList.toggle("active");
   dropDownMenu.classList.toggle("active");
   navRow.classList.toggle("active");
+  all.classList.toggle("active");
 
   menuItem.forEach((item) => {
     item.classList.toggle("active");
@@ -104,10 +103,30 @@ async function fetchCountry() {
 
         cardsBody.forEach((card) => {
           const regionValue = card.childNodes[5].innerText;
+
           const isIncludes = regionValue.includes(region);
 
           card.parentElement.classList.toggle("hide", !isIncludes);
         });
+      });
+    });
+
+    // back to all countries functionality
+    all.addEventListener("click", function () {
+      countryCards.forEach((element) => {
+        if (element.classList.contains("hide")) {
+          element.classList.remove("hide");
+        }
+      });
+    });
+
+    //
+    countryCards.forEach((countryCard) => {
+      countryCard.addEventListener("click", function (e) {
+        let cardTitle =
+          e.currentTarget.childNodes[3].children[0].innerText.trim();
+
+        window.location = `/pages/${cardTitle}.html`;
       });
     });
   } catch (error) {

@@ -26,9 +26,8 @@ async function fetchCountry() {
         subregion,
         capital,
         topLevelDomain,
-        currencies: { code },
-        languages,
-        borders,
+        currencies: [{ code }],
+        languages: [{ name }],
       } = element;
 
       console.log(code);
@@ -64,10 +63,10 @@ async function fetchCountry() {
                       <span class="bold">Top Level Domain:</span>  ${topLevelDomain}
                     </p>
                     <p class="currencies">
-                      <span class="bold">Currencies:</span> ${currencies}
+                      <span class="bold">Currencies:</span> ${code}
                     </p>
                     <p class="languages">
-                      <span class="bold">Languages:</span> ${languages}
+                      <span class="bold">Languages:</span> 
                     </p>
                   </div>
 
@@ -75,7 +74,7 @@ async function fetchCountry() {
                     class="borders mb-5 d-flex flex-row justify-content-between"
                   >
                     <div class="border-country shadow-sm bg-white rounded">
-                      ${borders}
+                      
                     </div>
                     <div class="border-country shadow-sm bg-white rounded">
                       Denmark

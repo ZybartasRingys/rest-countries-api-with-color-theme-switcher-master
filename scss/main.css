@@ -131,6 +131,26 @@ body.active {
   margin-right: 10px;
 }
 
+.borders {
+  padding: 1rem 1rem;
+}
+
+.borders-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  gap: 5px;
+}
+
+.border-heading {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  color: #111517;
+}
+
 @media screen and (min-width: 768px) and (max-width: 1438px) {
   #cards-section {
     display: -ms-grid !important;
@@ -287,13 +307,6 @@ body.active {
 .card {
   cursor: pointer;
   border: none;
-}
-
-.card:hover {
-  -webkit-box-shadow: rgba(0, 0, 0, 0.22) 0px 19px 43px;
-          box-shadow: rgba(0, 0, 0, 0.22) 0px 19px 43px;
-  -webkit-transform: translate3d(0px, -5px, 0px);
-          transform: translate3d(0px, -5px, 0px);
 }
 
 .card-image {

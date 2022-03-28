@@ -1,9 +1,9 @@
-console.log("connected");
-
 const cardContainer = document.querySelector(".cards-container");
 
 const url = "https://restcountries.com/v2/alpha?codes=DEU";
 //   "https://restcountries.com/v2/alpha?codes=DEU,USA,BRA,ISL,AFG,ALA,ALB,DZA";
+
+let borderCountries = [];
 
 async function fetchCountry() {
   try {
@@ -11,7 +11,6 @@ async function fetchCountry() {
     const country = await response.json();
 
     country.forEach((element) => {
-      console.log(element);
       cardContainer.insertAdjacentHTML("beforeend", createDetailCard(element));
     });
 
@@ -19,6 +18,7 @@ async function fetchCountry() {
 
     function createDetailCard(element) {
       let {
+        flag,
         name,
         nativeName,
         population,
@@ -27,16 +27,19 @@ async function fetchCountry() {
         capital,
         topLevelDomain,
         currencies: [{ code }],
-        languages: [{ name }],
+        languages: [{ ...languages }],
+        borders,
       } = element;
 
-      console.log(code);
+      borders.forEach((border) => {
+        borderCountries.push(border);
+      });
 
       return `
 
-        <div class="card">
+        <div class="card mt-4">
                   <img
-                    src="https://flagcdn.com/de.svg"
+                    src="${flag}"
                     class="card-img-top"
                     alt="..."
                   />
@@ -66,28 +69,33 @@ async function fetchCountry() {
                       <span class="bold">Currencies:</span> ${code}
                     </p>
                     <p class="languages">
-                      <span class="bold">Languages:</span> 
+                      <span class="bold">Languages:</span> ${languages.name}
                     </p>
                   </div>
 
                   <div
-                    class="borders mb-5 d-flex flex-row justify-content-between"
+                    class="col-11 borders mb-5 "
                   >
-                    <div class="border-country shadow-sm bg-white rounded">
-                      
-                    </div>
-                    <div class="border-country shadow-sm bg-white rounded">
-                      Denmark
-                    </div>
-                    <div class="border-country shadow-sm bg-white rounded">
-                      Denmark
-                    </div>
+                  <div><h5 class="border-heading mb-3">Border Countries: </h5>
+
+                  <div class=" borders-container"></h5>
+                  
+                    
                   </div>
                 </div>
         `;
     }
 
-    createDetailCard();
+    const detailContainer = document.querySelector(".borders-container");
+
+    borderCountries.forEach((border) => {
+      detailContainer.insertAdjacentHTML("beforeend", borderCountry(border));
+    });
+
+    function borderCountry(border) {
+      return `
+      <div class="border-country shadow-sm bg-white rounded"> ${border}</div>`;
+    }
   } catch (error) {
     console.log(error);
   }

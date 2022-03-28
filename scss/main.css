@@ -77,14 +77,22 @@ body.active {
   color: #111517;
 }
 
-.card {
+.detail-card {
   background-color: #fafafa;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
 }
 
 .card-img-top {
   width: 100%;
   height: 100%;
   border-radius: 5px;
+  padding: 1rem 1rem;
 }
 
 .card-body p {
@@ -177,6 +185,20 @@ body.active {
     font-size: 20px !important;
     line-height: 26px;
     cursor: pointer;
+  }
+  .card-img-top {
+    width: 560px;
+    height: 401px;
+  }
+  .detail-cards {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+  }
+  .borders-container {
+    -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr !important;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr !important;
   }
 }
 

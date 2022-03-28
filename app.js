@@ -54,6 +54,7 @@ async function fetchCountry() {
     const country = await response.json();
 
     country.forEach((element) => {
+      console.log(country);
       cardsContainer.insertAdjacentHTML("beforeend", createCard(element));
     });
 
@@ -124,7 +125,10 @@ async function fetchCountry() {
     countryCards.forEach((countryCard) => {
       countryCard.addEventListener("click", function (e) {
         let cardTitle =
-          e.currentTarget.childNodes[3].children[0].innerText.trim();
+          e.currentTarget.childNodes[3].children[0].innerText.replace(
+            /\s/g,
+            ""
+          );
 
         window.location = `/pages/${cardTitle}.html`;
       });

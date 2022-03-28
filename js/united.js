@@ -1,6 +1,6 @@
 const cardContainer = document.querySelector(".cards-container");
 
-const url = "https://restcountries.com/v2/alpha?codes=DEU";
+const url = "https://restcountries.com/v2/alpha?codes=USA";
 //   "https://restcountries.com/v2/alpha?codes=DEU,USA,BRA,ISL,AFG,ALA,ALB,DZA";
 
 let borderCountries = [];
@@ -37,7 +37,7 @@ async function fetchCountry() {
 
       return `
 
-        <div class="card mt-4">
+        <div class="card mt-3">
                   <img
                     src="${flag}"
                     class="card-img-top"

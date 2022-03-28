@@ -11,14 +11,17 @@
   }
 }
 
-.card {
+.detail-card {
   background-color: $VeryLightGray;
+  display: flex;
+  flex-direction: row;
 }
 
 .card-img-top {
   width: 100%;
   height: 100%;
   border-radius: 5px;
+  padding: 1rem 1rem;
 }
 
 .card-body {

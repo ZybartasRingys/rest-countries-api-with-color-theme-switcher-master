@@ -92,7 +92,6 @@ body.active {
   width: 100%;
   height: 100%;
   border-radius: 5px;
-  padding: 1rem 1rem;
 }
 
 .card-body p {
@@ -126,6 +125,23 @@ body.active {
   line-height: 16px;
 }
 
+.first-col p {
+  font-family: "Nunito Sans";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 32px;
+  color: #111517;
+}
+
+.first-col h5 {
+  font-style: normal;
+  font-weight: 800;
+  font-size: 32px;
+  line-height: 44px;
+  color: #111517;
+}
+
 .bold {
   font-family: "Nunito Sans";
   font-style: normal;
@@ -139,24 +155,32 @@ body.active {
   margin-right: 10px;
 }
 
-.borders {
-  padding: 1rem 1rem;
-}
-
-.borders-container {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr 1fr 1fr;
-      grid-template-columns: 1fr 1fr 1fr;
-  gap: 5px;
-}
-
 .border-heading {
   font-style: normal;
   font-weight: 600;
   font-size: 16px;
   line-height: 24px;
   color: #111517;
+}
+
+@media only screen and (max-width: 768px) {
+  .border-heading {
+    width: 160px;
+  }
+  .borders-container {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+    gap: 3px;
+  }
+  .first-col h5 {
+    font-style: normal;
+    font-weight: 800;
+    font-size: 22px;
+    line-height: 30px;
+    color: #111517;
+  }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1438px) {
@@ -186,19 +210,41 @@ body.active {
     line-height: 26px;
     cursor: pointer;
   }
-  .card-img-top {
+  .flag-container {
     width: 560px;
     height: 401px;
+    border-radius: 5px;
   }
-  .detail-cards {
+  .flag-container .card-img-top {
+    width: 100%;
+    height: 100%;
+  }
+  .borders {
+    height: 20px !important;
+  }
+  .borders-container {
+    height: 50px !important;
+    margin-left: 30px;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+    gap: 5px;
+  }
+  .detail-text {
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
   }
-  .borders-container {
-    -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr !important;
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr !important;
+  .first-col {
+    width: 50%;
+  }
+  .first-col p {
+    margin: 0 !important;
+  }
+  .second-col {
+    margin-top: 100px;
   }
 }
 

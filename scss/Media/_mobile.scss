@@ -1,1 +1,20 @@
+@media only screen and (max-width: 768px) {
+  .border-heading {
+    width: 160px;
+  }
+  .borders-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 3px;
+  }
 
+  .first-col {
+    h5 {
+      font-style: normal;
+      font-weight: 800;
+      font-size: 22px;
+      line-height: 30px;
+      color: #111517;
+    }
+  }
+}

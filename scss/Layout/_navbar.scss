@@ -8,9 +8,11 @@
   .where {
     font-style: normal;
     font-weight: 800;
-    font-size: 14px;
+    font-size: 24px;
     line-height: 20px;
     color: $VeryDarkBlue2;
+    text-decoration: none;
+    cursor: pointer;
   }
 
   .dark {

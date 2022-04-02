@@ -41,6 +41,16 @@ function switchDark() {
   all.classList.toggle("active");
   moon.classList.toggle("active");
 
+  // dark mode text
+
+  if (dark.innerText === "Dark Mode") {
+    dark.innerText = "Light Mode";
+  } else if (dark.innerText === "Light Mode") {
+    dark.innerText = "Dark Mode";
+  } else {
+    dark.innerText = "Light Mode";
+  }
+
   menuItem.forEach((item) => {
     item.classList.toggle("active");
   });

@@ -16,6 +16,10 @@
     border: none;
     border-radius: 10px !important;
 
+    ::placeholder {
+      color: white !important;
+    }
+
     &:focus {
       box-shadow: none !important;
     }
@@ -42,6 +46,7 @@
   margin-left: 30px;
   cursor: pointer;
   background-color: white;
+  color: #848484;
 }
 
 // Search input end

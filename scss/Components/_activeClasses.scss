@@ -8,20 +8,29 @@ body.active {
 }
 
 .where.active {
-  color: white !important;
+  color: $White !important;
 }
 
 .dark.active {
-  color: white !important;
+  color: $White !important;
 }
 
 .card-body.active {
+  background-color: $VeryDarkBlue !important;
+  color: $White !important;
+}
+
+.card-text.active {
+  background-color: $VeryDarkBlue !important;
+  color: $White !important;
+}
+
+.card-image.active {
   background-color: $DarkBlue !important;
-  color: white !important;
 }
 
 .card-title.active {
-  color: white !important;
+  color: $White !important;
 }
 
 .search.active {
@@ -30,11 +39,12 @@ body.active {
 
 .dropdown.active {
   background-color: $DarkBlue !important;
-  color: white !important;
+  color: $White !important;
 }
 
 .search-input.active {
   background-color: $DarkBlue !important;
+  color: $White !important;
 }
 
 .input-group.active {
@@ -43,6 +53,12 @@ body.active {
 
 .fa-magnifying-glass.active {
   background-color: $DarkBlue !important;
+  color: $White !important;
+}
+
+.back-btn.active {
+  background-color: $DarkBlue !important;
+  color: $White !important;
 }
 
 .dropdown-menu.active {
@@ -50,7 +66,7 @@ body.active {
 }
 
 .dropdown-item.active {
-  color: white !important;
+  color: $White !important;
 }
 
 .nav-row.active {
@@ -58,9 +74,34 @@ body.active {
 }
 
 .all.active {
-  color: white !important;
+  color: $White !important;
 }
 
 .hide {
   display: none;
+}
+
+.first-col.active {
+  color: $White !important;
+}
+
+.bold.active {
+  color: $White !important;
+}
+
+.border-heading.active {
+  color: $White !important;
+}
+
+.border-country.active {
+  color: $White !important;
+  background-color: $DarkBlue !important;
+}
+
+.fa-solid.active {
+  color: $White;
+}
+
+.back.active {
+  color: $White !important;
 }

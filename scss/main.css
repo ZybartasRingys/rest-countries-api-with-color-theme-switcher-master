@@ -16,8 +16,17 @@ body.active {
 }
 
 .card-body.active {
-  background-color: #2b3945 !important;
+  background-color: #202c37 !important;
   color: white !important;
+}
+
+.card-text.active {
+  background-color: #202c37 !important;
+  color: white !important;
+}
+
+.card-image.active {
+  background-color: #2b3945 !important;
 }
 
 .card-title.active {
@@ -35,6 +44,7 @@ body.active {
 
 .search-input.active {
   background-color: #2b3945 !important;
+  color: white !important;
 }
 
 .input-group.active {
@@ -43,6 +53,12 @@ body.active {
 
 .fa-magnifying-glass.active {
   background-color: #2b3945 !important;
+  color: white !important;
+}
+
+.back-btn.active {
+  background-color: #2b3945 !important;
+  color: white !important;
 }
 
 .dropdown-menu.active {
@@ -63,6 +79,31 @@ body.active {
 
 .hide {
   display: none;
+}
+
+.first-col.active {
+  color: white !important;
+}
+
+.bold.active {
+  color: white !important;
+}
+
+.border-heading.active {
+  color: white !important;
+}
+
+.border-country.active {
+  color: white !important;
+  background-color: #2b3945 !important;
+}
+
+.fa-solid.active {
+  color: white;
+}
+
+.back.active {
+  color: white !important;
 }
 
 .back-btn {
@@ -299,6 +340,22 @@ body.active {
   border-radius: 10px !important;
 }
 
+.search .search-input ::-webkit-input-placeholder {
+  color: white !important;
+}
+
+.search .search-input :-ms-input-placeholder {
+  color: white !important;
+}
+
+.search .search-input ::-ms-input-placeholder {
+  color: white !important;
+}
+
+.search .search-input ::placeholder {
+  color: white !important;
+}
+
 .search .search-input:focus {
   -webkit-box-shadow: none !important;
           box-shadow: none !important;
@@ -322,6 +379,7 @@ body.active {
   margin-left: 30px;
   cursor: pointer;
   background-color: white;
+  color: #848484;
 }
 
 .dropdown {
@@ -378,9 +436,8 @@ body.active {
 }
 
 .card-image {
-  width: 100% !important;
+  width: 100%;
   height: 160px;
-  border-radius: 5px 5px 0 0 !important;
 }
 
 .card-image .flag {

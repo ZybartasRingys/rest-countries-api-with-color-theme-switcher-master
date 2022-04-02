@@ -16,6 +16,7 @@ const glass = document.querySelector(".fa-magnifying-glass");
 const moon = document.querySelector(".fa-moon");
 const navRow = document.querySelector(".nav-row");
 const all = document.querySelector(".all");
+const searchIcon = document.querySelector(".fa-magnifying-glass");
 
 const url =
   "https://restcountries.com/v2/alpha?codes=DEU,USA,BRA,ISL,AFG,ALA,ALB,DZA";
@@ -38,6 +39,7 @@ function switchDark() {
   dropDownMenu.classList.toggle("active");
   navRow.classList.toggle("active");
   all.classList.toggle("active");
+  moon.classList.toggle("active");
 
   menuItem.forEach((item) => {
     item.classList.toggle("active");
@@ -54,7 +56,6 @@ async function fetchCountry() {
     const country = await response.json();
 
     country.forEach((element) => {
-      console.log(country);
       cardsContainer.insertAdjacentHTML("beforeend", createCard(element));
     });
 
@@ -63,6 +64,8 @@ async function fetchCountry() {
     const countryCards = document.querySelectorAll(".card");
     const cardsBody = document.querySelectorAll(".card-body");
     const title = document.querySelectorAll(".card-title");
+    const cardText = document.querySelectorAll(".card-text");
+    const cardIMG = document.querySelectorAll(".card-image");
 
     // cards title dark light theme
     title.forEach((element) => {
@@ -71,6 +74,18 @@ async function fetchCountry() {
       });
     });
     // cards body dark light theme
+    cardText.forEach((element) => {
+      dark.addEventListener("click", function () {
+        element.classList.toggle("active");
+      });
+    });
+
+    cardIMG.forEach((element) => {
+      dark.addEventListener("click", function () {
+        element.classList.toggle("active");
+      });
+    });
+
     cardsBody.forEach((element) => {
       dark.addEventListener("click", function () {
         element.classList.toggle("active");
@@ -155,7 +170,7 @@ function createCard(element) {
                 <img class="flag" src="${flag}" alt="Flag">
                 </div>
                 <div class="card-body">
-                  <h5 class="card-title">${title}</h5>
+                  <h5 class="card-title mb-4">${title}</h5>
                   <p class="card-text"><span>Population:</span> ${population}</p>
                   <p class="card-text"><span>Region:</span> ${region}</p>
                   <p class="card-text"><span>Capital:</span> ${capital}</p>
